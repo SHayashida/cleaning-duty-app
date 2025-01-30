@@ -1,11 +1,11 @@
 // 初期の組み合わせ
 const initialAssignments = [
-    { location: "床（オフィス）", team: "旧グロースチーム" },
-    { location: "床（会議室）", team: "エンジニアチーム" },
-    { location: "共用スペース", team: "コーポレートチーム" },
-    { location: "机", team: "セールスチーム" },
-    { location: "ホワイトボード、戸棚、モニタ、換気", team: "CSチーム" },
-    { location: "給湯室、ドア", team: "TSチーム" }
+    { location: "床（オフィス）", team: "コーポレート" },
+    { location: "床（会議室）", team: "セールス" },
+    { location: "共用スペース", team: "セールス" },
+    { location: "机", team: "プロダクト" },
+    { location: "ホワイトボード、戸棚、モニタ、換気", team: "プロダクト" },
+    { location: "給湯室、ドア", team: "CS・TS" }
 ];
 
 // 今週の月曜日を計算
