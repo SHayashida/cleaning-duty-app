@@ -1,7 +1,5 @@
 // assignments.test.js
 const { getMondayOfWeek, getWeekNumber, rotateAssignments, getWeeklyAssignments, initialAssignments } = require('../public/script.js');
-// __tests__/test.js
-const { getWeeklyAssignments } = require('../public/script'); // ファイルパスは適宜調整
 
 describe('Specific Date Rotation', () => {
   test('2025/03/12の割り当ての順序が正しい', () => {
