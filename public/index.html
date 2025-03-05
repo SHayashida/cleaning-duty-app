@@ -7,7 +7,12 @@
 <body>
   <h1>掃除当番割り当て</h1>
   <pre id="assignments"></pre>
-  <!-- この1行だけでOK: 読み込まれた時点で displayAssignments() が呼ばれる -->
-  <script type="module" src="./script.js"></script>
+  <script type="module">
+    import { displayAssignments } from './script.js';
+    // DOMContentLoaded イベントで呼び出すのも安全です
+    document.addEventListener("DOMContentLoaded", () => {
+      displayAssignments();
+    });
+  </script>
 </body>
 </html>
