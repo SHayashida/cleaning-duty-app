@@ -1,12 +1,12 @@
-// assignments.js
-const initialAssignments = [
+// CommonJS (module.exports) を削除し、必要に応じて export する
+export const initialAssignments = [
     { location: "床（オフィス）", team: "コーポレート" },
     { location: "床（会議室）", team: "セールス" },
     { location: "共用スペース", team: "セールス" },
     { location: "机", team: "プロダクト" },
     { location: "ホワイトボード、戸棚、モニタ、換気", team: "プロダクト" },
     { location: "給湯室、ドア", team: "CS・TS" }
-  ];
+];
   
   function getMondayOfWeek(date = new Date()) {
     const today = new Date(date);
@@ -33,11 +33,15 @@ const initialAssignments = [
     return rotateAssignments(initialAssignments, weekNumber);
   }
   
-  module.exports = {
-    initialAssignments,
-    getMondayOfWeek,
-    getWeekNumber,
-    rotateAssignments,
-    getWeeklyAssignments,
-  };
+// 追加: 画面に表示する関数を定義し、読み込み時に実行する
+function displayAssignments() {
+    const assignmentsElement = document.getElementById("assignments");
+    const assignments = getWeeklyAssignments();
+    assignmentsElement.textContent = assignments
+      .map(a => `${a.location}: ${a.team}`)
+      .join("\n");
+  }
+  
+  // ES Modules では即時実行する場合、ファイルの末尾に直接書いてもOK
+  displayAssignments();
   
