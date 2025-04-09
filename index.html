@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>掃除当番アプリ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>掃除当番割り当て</h1>
+    
+    <div class="week-nav">
+      <button id="prev-week" class="btn">前の週</button>
+      <div id="current-week">現在の週</div>
+      <button id="next-week" class="btn">次の週</button>
+    </div>
+    
+    <div id="assignments"></div>
+    
+    <div class="footer">
+      <p>※毎週月曜日に自動更新されます</p>
+    </div>
+  </div>
+
+  <script type="module">
+    import { displayAssignments } from './script.js';
+    // スクリプト内でイベントリスナーが設定されているため、追加のコードは不要です
+  </script>
+</body>
+</html>
