@@ -67,3 +67,28 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# テストディレクトリを無視
+__tests__/
+*/__tests__/*
+
+# Firebase関連ファイルを無視
+firebase.json
+.firebaserc
+firebase-debug.log
+firebase-debug.*.log
+.firebase/
+firebase-config.js
+firebase.config.js
+
+# Firebase関連の設定ファイル
+.firebase/*
+firebase-adminsdk.json
+
+# その他一般的な無視ファイル
+node_modules/
+.env
+.env.local
+.env.development
+.env.test
+.env.production
